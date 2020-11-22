@@ -1,0 +1,12 @@
+appId: me.oska.dev
+productName: Loyast
+copyright: Copyright © 2020 Loyast
+directories:
+  output: dist
+  buildResources: resources
+files:
+  - from: .
+    filter:
+      - package.json
+      - app
+publish: null
