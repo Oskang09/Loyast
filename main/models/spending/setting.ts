@@ -15,9 +15,6 @@ class SpendingSetting extends Model {
     id: string
 
     @Column({ type: DataType.STRING })
-    currency: string
-
-    @Column({ type: DataType.STRING })
     amountPerPoint: string
 
     @Column({ type: DataType.JSONB })

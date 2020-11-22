@@ -1,11 +1,8 @@
-import {
-  app,
-  screen,
-  BrowserWindow,
-  BrowserWindowConstructorOptions,
-} from 'electron';
+import { app, screen, BrowserWindow, BrowserWindowConstructorOptions } from 'electron';
 import serve from 'electron-serve';
 import Store from 'electron-store';
+import 'reflect-metadata';
+import './route';
 
 function createWindow(windowName: string, options: BrowserWindowConstructorOptions): BrowserWindow {
   const key = 'window-state';
@@ -101,10 +98,10 @@ if (isProd) {
   });
 
   if (isProd) {
-    await mainWindow.loadURL('app://./login.html');
+    await mainWindow.loadURL('app:// ./login.html');
   } else {
     const port = process.argv[2];
-    await mainWindow.loadURL(`http://localhost:${port}/home`);
+    await mainWindow.loadURL(`http://localhost:${port}/login`);
     mainWindow.webContents.openDevTools();
   }
 })();

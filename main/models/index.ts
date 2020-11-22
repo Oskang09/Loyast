@@ -1,4 +1,4 @@
-import { Sequelize, ModelCtor } from 'sequelize-typescript';
+import { Sequelize, DataType, ModelCtor } from 'sequelize-typescript';
 
 import Member from './member';
 import Record from './record';

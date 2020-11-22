@@ -52,7 +52,7 @@ export default function Reward() {
             />
             <Paginator pageSize={10} total={50} />
         </Container>
-    )
+    );
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {

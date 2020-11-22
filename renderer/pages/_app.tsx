@@ -5,7 +5,7 @@ import { Layout, Col, Row } from 'antd';
 import { QrcodeOutlined, TransactionOutlined, TrophyOutlined } from '@ant-design/icons';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
-import { processRoute } from 'utils/general';
+import { processRoute } from '../utils/general';
 
 const { Header } = Layout;
 
@@ -78,7 +78,7 @@ function LoyastApp({ Component, pageProps, router }) {
         </Footer>
       </Fragment>
     </Layout>
-  )
+  );
 }
 
 export default LoyastApp;
