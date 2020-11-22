@@ -5,6 +5,7 @@ import { Layout, Col, Row } from 'antd';
 import { QrcodeOutlined, TransactionOutlined, TrophyOutlined } from '@ant-design/icons';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
+import { processRoute } from 'utils/general';
 
 const { Header } = Layout;
 
@@ -24,17 +25,17 @@ const Footer = styled(Layout.Footer)`
 const setId = (selected) => selected ? { id: 'antd-primary' } : {};
 const bottomBar = [
   {
-    route: '/loyalty',
+    route: processRoute('/loyalty'),
     icon: (selected) => <TransactionOutlined {...setId(selected)} style={{ fontSize: 20 }} />,
     title: (selected) => <p {...setId(selected)}>Loyalty</p>
   },
   {
-    route: '/qrcode',
+    route: processRoute('/qrcode'),
     icon: (selected) => <QrcodeOutlined {...setId(selected)} style={{ fontSize: 20 }} />,
     title: (selected) => <p {...setId(selected)}>User QR</p>
   },
   {
-    route: '/reward',
+    route: processRoute('/reward'),
     icon: (selected) => <TrophyOutlined {...setId(selected)} style={{ fontSize: 20 }} />,
     title: (selected) => <p {...setId(selected)}>Rewards</p>
   },
